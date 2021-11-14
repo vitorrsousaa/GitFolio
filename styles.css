@@ -4,7 +4,7 @@
     --weight-hight: 500;
     --background-color-gray: #616161;
     --border-color: #212121;
-    --size-img-work: 500px
+    --size-img-work: 300px
 }
 
 body {
@@ -110,7 +110,7 @@ span {
 
 #projects > section {
     margin: 60px 10px;
-    background-color: var(--background-color-gray);
+    background-color: var(--border-color);
     border-radius: 20px;
     border: solid 5px var(--border-color);
 }
@@ -125,6 +125,15 @@ span {
 
 #projects > section > path {
     margin-right: 20px;
+}
+
+.project-active {
+    transform:scale(0.9);
+}
+
+.project-active:hover{
+    transform: scale(0.97);
+    transition: transform .2s;
 }
 
 #works > section {
@@ -163,16 +172,17 @@ span {
     height: 30px;
     border-radius: 30px;
     font-family: 'Comfortaa', cursive;
-    border: 3px solid var(--border-color);
-    background-color: white;
+    border: 3px solid var(--background-color-gray);
     cursor: pointer;
     font-size: 17px;
+    background: var(--background-color-gray);
+    
 }
 
 .code-git:hover {
-    background: var(--background-color-gray);
-    border-color: var(--background-color-gray);
-    color: white;
+    background: var(--main-text-color);
+    border-color: var(--border-color);
+    color: var(--border-color) !important
 }
 
 footer {
@@ -180,7 +190,9 @@ footer {
     height: 50px;
 }
 
-
+a:hover {
+    color: var(--background-color-gray) 
+}
 
 
 

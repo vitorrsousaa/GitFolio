@@ -29,7 +29,7 @@ function requestRepos(url){
         let content = ''
         const container = document.getElementById('projects')
         // Id dos projetos que quero exibir na tela
-        const idProjects = [426612520, 426458248, 426457757, 426458045, 426436825]
+        const idProjects = [426612520, 426458248, 426457757, 426458045, 426436825, 427812656]
         const projectsView = []
 
         for (let i = 0; i<jsonParsed.length; i++){
@@ -42,7 +42,7 @@ function requestRepos(url){
         }
         
         for(let i = 0; i<projectsView.length; i++){
-            content += `<section id="project-${projectsView[i].name}"> 
+            content += `<section id="project-${projectsView[i].name}" class="project-active"> 
             <a href="#${projectsView[i].name}"><h2>${projectsView[i].name}</h2></a>
             <div id="linkGit"><span class="iconify" data-icon="uil:github" style="color: white; margin-right: 12px;"></span><a href="${projectsView[i].html_url}">Acesse o projeto!</a></div>
             <div id="watchers"><span class="iconify" data-icon="akar-icons:star" style="color: white; margin-right: 12px;"></span>${projectsView[i].watchers}</div>
